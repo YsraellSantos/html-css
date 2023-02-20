@@ -1,0 +1,227 @@
+
+                        /*Goolge fontes*/
+                        @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Caveat:wght@500;700&family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Moon+Dance&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+ 
+
+                        /*Inprtando uma fonte*/
+@font-face {
+    font-family: 'Android';
+    src: url('../fontes/idroid.otf') format('opentype');
+    font-weight: normal;
+}
+
+
+
+
+                        /*Palheta de cores*/
+:root{
+ --cor0: #ebe5c5;
+ --cor1: #83e1ad;
+ --cor2: #3ddc84 ;
+ --cor3: #2fa866;
+ --cor4: #1a5c37;
+ --cor5: #063d1e;
+
+ --fonte-padrao: arial, verdana, Helvetica, sans-serif;
+ --font-destaque: 'Bebas Neue',cursive ;
+ --font-android: 'Android', cursive;
+}
+
+ *{
+
+    margin:0;
+    padding: 0;
+}
+
+
+
+body{
+    background-color: var(--cor0);
+    font-family: var(--fonte-padrao);
+}
+
+a.externo::after{
+    content: '\00A0\1F517';
+}
+
+header{
+  background-image: linear-gradient(to bottom, var(--cor3), var(--cor5));
+    min-height: 150px;
+    text-align: center;
+    padding-top: 30px;
+    
+}
+
+header > h1{
+    color: white;
+    font-family: var(--font-destaque);
+    font-size: 3em;
+    margin-bottom: 20px;
+    text-shadow: 5px 2px 0px rgba(24, 9, 9, 0.94);
+    
+    
+  
+}
+
+header > p{
+    color: white;
+    font-family: var(--fonte-padrao);
+    font-size: 1.2em;
+    max-width: 500px;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin: auto;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 0px rgba(24, 9, 9, 0.488);
+}
+
+nav{
+    background-color: var(--cor5);
+    padding: 10px;
+    box-shadow: 0px 7px 7px black;
+}
+
+nav > a{
+    color: white;
+    padding: 10px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav :hover{
+    background-color: var(--cor3);
+    color: var(--cor4);
+    transition-duration:  1s;
+    border-radius: 7px;
+}
+
+main{
+    min-width: 300px;
+    max-width: 1000px;
+    margin: auto;
+    background-color: white;
+    padding: 20px;
+    margin-bottom: 2rem;
+    box-shadow: 0px 0px 10px rgb(0, 0, 0);
+    border-bottom-left-radius: 15px;      /*Sometes as  Bordas de baixo da esquerda fique arredondadas*/
+    border-bottom-right-radius: 15px;   /* Somente as Borda de baixo da direita fique arredondadas */
+  
+   
+    
+}
+ 
+main h1{
+    color: var(--cor5);
+    font-family: var(--font-android);
+}
+
+main h2{
+    font-family: var(--font-android);
+    color: var(--cor4);
+    font-size: 1.3em;
+    background-image: linear-gradient(to right, var(--cor1),transparent);  /* Vai ficar transparente */
+    text-indent: 7px;
+}
+
+main img{
+    width: 100%;
+}
+
+
+main img.pequena{
+    max-width: 350px;
+    display: block;
+    margin: auto;
+}
+
+main p{
+    margin: 15px 0px ;
+    text-align: justify;  /* Testo justificado*/
+    text-indent: 30px;  /* Espaço de todos os começo de texto */
+    line-height: 1.7em;  /* Espsçamento entre linhas */
+    font-size: 1em;
+
+}
+
+main strong {
+    color: var(--cor4);
+    font-weight: bold;
+    padding: 2px 6px;
+ 
+}
+
+main a {
+    text-decoration: none; /* Tira todas as linha dos links*/
+    font-weight: bold;
+    color: var(--cor5);
+    background-color: var(--cor1);
+    padding: 2px 6px;
+    border: radius 5px;
+}
+
+main a:hover{
+    text-decoration: underline; /* Aparencia de link coloca o tracinho em baixo do link*/
+    color: rgba(255, 0, 0, 0.83);
+}
+
+div.video{
+    background-color: var(--cor5);
+    margin: 0px -20px 30px -20px;
+    padding: 20px;
+    padding-bottom: 57%;
+    position: relative;
+}
+
+div.video >iframe{
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    width:90% ;
+    height:90% ;
+}
+
+
+aside{
+    background-color: var(--cor1);
+    padding:10px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgb(0, 0, 0);
+
+}
+
+aside > ul{
+    list-style: '\2714\00A0\00A0';  /* ✔ U+2714 'Pega sem o mais.... '00A0' e o espaço'*  Nem todo navegador e compativel*/
+    list-style-position: inside;  /*Bolinha pra dentro do Padding*/
+    columns: 2;                    /*Duas colunas*/
+
+}
+aside h3{
+    background-color: var(--cor4);
+    color: white;
+    padding:10px;
+    margin: -10px -10px 0px -10px;   /* margin negativa, vassa pra fora */
+    border-radius: 10px 10px 0px 0px;
+}
+
+footer{
+    background-color: var(--cor5);
+    color: white;
+    text-align: center;
+    font-size: 0.8em;
+    padding: 15px;
+}
+
+footer  a {
+    color: rgba(12, 160, 183, 0.83);
+    font-weight: bolder;
+    text-decoration: none;
+    padding-bottom: 2px;
+}
+
+footer a:hover{
+    text-decoration: underline;
+    color: rgba(225, 212, 29, 0.83);
+}
+
+
+
